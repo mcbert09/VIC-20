@@ -1,0 +1,28 @@
+{
+    "name": "VIC-20 Development",
+    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {},
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "postCreateCommand": [
+        "bash",
+        ".devcontainer/setup.sh"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "tlgkccampbell.65816-assembly",
+                "ms-vscode.hexeditor",
+                "gruntfuggly.todo-tree"
+            ],
+            "settings": {
+                "files.associations": {
+                    "*.asm": "65816-assembly"
+                }
+            }
+        }
+    },
+    "forwardPorts": [8080],
+    "remoteUser": "codespace"
+}
